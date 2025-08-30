@@ -1,0 +1,14 @@
+@use "global";
+@use "adaptive";
+
+.footer-container{
+  padding: 40px 0 72px 0;
+  background: global.$antique_white_color;
+}
+
+.footer-paragraph{
+  font-size: 16px;
+  line-height: 120%;
+  opacity: 0.6;
+  color: global.$light_black_color;
+}

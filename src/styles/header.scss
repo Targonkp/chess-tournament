@@ -1,0 +1,122 @@
+@use "global";
+@use "adaptive";
+
+.header-container{
+  padding: 26px 0 120px 0;
+  background-color: global.$antique_white_color;
+  background: url("../images/main.png") center bottom / cover no-repeat;
+  position: relative;
+
+  @include adaptive.medium{
+    background: url("../images/main-1024.png") center bottom / cover no-repeat;
+  }
+}
+
+.header{
+
+  &__logo{
+    width: 245px;
+
+    img{
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 0 62px 0;
+      transition: 0.2s;
+    }
+
+    &:hover img{
+      opacity: 0.7;
+      transition: 0.2s;
+    }
+  }
+
+  &__text{
+    max-width: 542px;
+    width: 100%;
+
+    .text-main{
+      margin: 24px 0;
+
+      h1{
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+
+      span{
+        display: block;
+      }
+    }
+
+    .text-additional{
+      margin: 20px 0 40px 0;
+
+      span{
+        display: inline-block;
+        font-size: 18px;
+        line-height: 130%;
+        text-align: center;
+        color: global.$light_black_color;
+      }
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+  }
+}
+
+.button{
+ &__wrap{
+   max-width: 263px;
+   min-width: 200px;
+   width: 100%;
+
+   &:first-child{
+     margin: 0 16px 0 0;
+   }
+ }
+
+ &__link{
+   display: inline-block;
+   box-sizing: border-box;
+   text-decoration: none;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 130%;
+   border-radius: 66px;
+   text-align: center;
+ }
+
+  &__link_black{
+    color: global.$white_color;
+    background: global.$dark_gray_color;
+    padding: 16px 49px;
+    transition: 0.2s;
+
+    &:hover{
+      color: global.$dark_gray_color;
+      background: global.$yellow_orange_color;
+      transition: 0.3s;
+    }
+  }
+
+  &__link_transparent{
+    color: global.$dark_gray_color;
+    background: transparent;
+    border: 2px solid global.$dark_gray_color;
+    padding: 14px 49px;
+    transition: 0.2s;
+
+    &:hover{
+      transition: 0.3s;
+      color: global.$white_color;
+      background: global.$dark_gray_color;
+    }
+  }
+}
+

@@ -1,0 +1,144 @@
+@use "adaptive";
+
+$black_color: #000000;
+$light_black_color: #313131;
+$white_color: #FFFFFF;
+$dark_gray_color: #1F1F1F;
+$yellow_orange_color: #FBCE51;
+$red_color: #F54932;
+$antique_white_color: #E9DED4;
+$blue_color: #3057A2;
+$gray_color: #D6D6D6;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Golos Text', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: $light_black_color;
+  background: $white_color;
+  overflow-x: hidden;
+  min-width: 280px;
+}
+
+.block-wrap{
+  max-width: 1366px;
+  width: 100%;
+  padding: 0 4.2%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include adaptive.medium{
+    padding: 0 3.2%;
+  }
+
+  @include adaptive.small{
+    padding: 0 4.2%;
+  }
+
+  @include adaptive.x-small{
+    padding: 0 5.5%;
+  }
+}
+
+h1{
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+  color: $light_black_color;
+}
+
+h2{
+  font-family: 'Merriweather', sans-serif;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 120%;
+  color: $light_black_color;
+}
+
+.marquee-block{
+  width: 100%;
+  overflow: hidden;
+  background: $red_color;
+  display: flex;
+}
+
+.marquee-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 18px 0;
+  display: flex;
+  animation: marquee 35s linear infinite;
+
+  @include adaptive.medium{
+    padding: 16px 0;
+  }
+
+  @include adaptive.small{
+    padding: 14px 0;
+  }
+
+  @include adaptive.x-small{
+    padding: 10px 0;
+  }
+
+  &__item{
+    white-space: nowrap;
+    font-family: 'Merriweather', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: $white_color;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 12px 0 0;
+
+    @include adaptive.medium{
+      font-size: 20px;
+    }
+
+    @include adaptive.small{
+      font-size: 18px;
+    }
+
+    @include adaptive.x-small{
+      font-size: 16px;
+    }
+
+    &:after{
+      content:'';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: $white_color;
+      border-radius: 50%;
+      margin: 0 0 0 12px;
+    }
+  }
+}
+
+.marquee-list.reverse{
+  animation: marquee 35s linear reverse infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
