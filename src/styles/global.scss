@@ -57,6 +57,18 @@ h1{
   font-size: 60px;
   line-height: 110%;
   color: $light_black_color;
+
+  @include adaptive.medium{
+    font-size: 48px;
+  }
+
+  @include adaptive.small{
+    font-size: 44px;
+  }
+
+  @include adaptive.x-small{
+    font-size: 36px;
+  }
 }
 
 h2{
@@ -65,6 +77,18 @@ h2{
   font-size: 54px;
   line-height: 120%;
   color: $light_black_color;
+
+  @include adaptive.medium{
+    font-size: 46px;
+  }
+
+  @include adaptive.small{
+    font-size: 44px;
+  }
+
+  @include adaptive.x-small{
+    font-size: 36px;
+  }
 }
 
 .marquee-block{

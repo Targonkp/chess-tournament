@@ -6,15 +6,40 @@
 }
 
 .introduction-block {
-  padding: 140px 0 60px 0;
+  padding: 80px 0 60px 0;
+
+  @include adaptive.small{
+    padding: 60px 0 50px 0;
+  }
+
+  @include adaptive.x-small{
+    padding: 48px 0 40px 0;
+  }
 }
 
 .stages-block {
   padding: 140px 0 60px 0;
+
+  @include adaptive.small{
+    padding: 100px 0 50px 0;
+  }
+
+  @include adaptive.x-small{
+    padding: 80px 0 40px 0;
+  }
 }
 
 .participants-block{
-  padding: 140px 0 200px 0;
+  padding: 140px 0 130px 0;
+
+  @include adaptive.small{
+    padding: 100px 0 110px 0;
+  }
+
+  @include adaptive.x-small{
+    padding: 80px 0 100px 0;
+  }
+
 }
 
 .introduction-paragraph{
@@ -56,6 +81,22 @@
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+
+  &__image.desktop-version{
+    display: block;
+
+    @include adaptive.small{
+      display: none;
+    }
+  }
+
+  &__image.mobile-version{
+    display: none;
+
+    @include adaptive.small{
+      display: block;
     }
   }
 }
@@ -185,6 +226,11 @@
 
   .main-text-block{
     position: relative;
+
+    @include adaptive.small{
+      display: inline-block;
+      width: 100%;
+    }
   }
 
   .additional-text-block{
@@ -202,6 +248,19 @@
     text-transform: none;
     max-width: 280px;
     width: 100%;
+
+    @include adaptive.small{
+      padding: 12px 0 0 0;
+      max-width: none;
+      top: auto;
+      bottom: 0;
+      transform: translateY(100%);
+      left: 0;
+    }
+
+    @include adaptive.x-small{
+      font-size: 18px;
+    }
   }
 }
 
@@ -292,7 +351,7 @@
 .participants-header{
   max-width: 810px;
   width: 100%;
-  margin: 0 0 60px 0;
+  margin: 0 0 50px 0;
 
   h2{
     margin: 0;
@@ -303,10 +362,18 @@
 
 .switches-wrap{
   display: flex;
+  justify-content: center;
   gap: 0 14px;
   position: absolute;
   right: 0;
   top: 10px;
+
+  @include adaptive.small{
+    top: auto;
+    bottom: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .switch{
@@ -324,9 +391,11 @@
   &__element[data-disabled="false"]{
     transition: 0.2s;
 
-    &:hover{
-      transition: 0.2s;
-      opacity: 0.7;
+    @media screen and (min-width: 769px){
+      &:hover{
+        transition: 0.2s;
+        opacity: 0.7;
+      }
     }
   }
 
@@ -357,33 +426,51 @@
       display: inline-block;
     }
 
-    span:nth-child(2){
+    .separator-element{
       width: 9px;
     }
 
-    span:nth-child(1),
-    span:nth-child(3){
+    .active-element,
+    .total-element{
       width: 12px;
     }
 
-    span:nth-child(2),
-    span:nth-child(3){
+    .separator-element,
+    .total-element{
       opacity: 0.6;
     }
   }
 }
 
+.participants-wrap{
+  width: 100%;
+  overflow: hidden;
+}
+
 .participants-list{
   display: flex;
   gap: 0 20px;
-  overflow: hidden;
+  transition: 0.5s;
+
+  @include adaptive.x-small{
+    gap: 0;
+  }
 
   &__element{
     width: calc((100% - 40px)/3);
+    padding: 10px 0;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include adaptive.small{
+      width: calc((100% - 40px)/2);
+    }
+
+    @include adaptive.x-small{
+      width: 100%;
+    }
   }
 }
 

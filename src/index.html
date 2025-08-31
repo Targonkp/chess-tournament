@@ -40,17 +40,17 @@
         <div class="block-wrap">
             <div class="introduction-header">
                 <div class="introduction-header__text">
-                    <p class="introduction-paragraph">
-                        Чтобы поддержать Международный васюкинский турнир
+                    <div class="introduction-paragraph">
+                       <span>Чтобы поддержать Международный васюкинский турнир</span>
+                    <div class="introduction-header__image mobile-version">
+                        <img src="images/introduction-image-1-1024.png" alt="Шахматисты">
+                    </div>
                         посетите лекцию на&nbsp;тему:
                         <span class="red-text">«Плодотворная дебютная идея»</span>
-                    </p>
+                    </div>
                 </div>
-                <div class="introduction-header__image">
-                   <picture>
-                       <source media="(max-width: 1024px)" srcset="images/introduction-image-1-1024.png">
-                       <img src="images/introduction-image-1.png" alt="Шахматисты">
-                   </picture>
+                <div class="introduction-header__image desktop-version">
+                    <img src="images/introduction-image-1.png" alt="Шахматисты">
                 </div>
             </div>
             <div class="introduction-description">
@@ -236,7 +236,7 @@
                 <h2>Участники турнира</h2>
             </div>
                 <div class="switches-wrap">
-                <div class="switch__element" data-disabled="false">
+                <div class="switch__element switch__element_previous" data-disabled="false">
                     <span class="switch__arrow">
                         <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.5382 18.4615L2.07666 9.99995L10.5382 1.53841" stroke="white" stroke-width="2" stroke-linecap="square"/>
@@ -244,11 +244,11 @@
                     </span>
                 </div>
                 <div class="switch__text">
-                    <span>1</span>
-                    <span>/</span>
-                    <span>6</span>
+                    <span class="active-element"></span>
+                    <span class="separator-element">/</span>
+                    <span class="total-element"></span>
                 </div>
-                <div class="switch__element" data-disabled="true">
+                <div class="switch__element switch__element_next" data-disabled="false">
                     <span class="switch__arrow reverse">
                         <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.5382 18.4615L2.07666 9.99995L10.5382 1.53841" stroke="white" stroke-width="2" stroke-linecap="square"/>
@@ -256,8 +256,9 @@
                     </span>
                 </div>
             </div>
-                <div class="participants-list">
-                    <div class="participants-list__element">
+                <div class="participants-wrap">
+                    <div class="participants-list">
+                        <div class="participants-list__element active-element" data-number="1">
                         <div class="participant-element__image-wrap">
                             <img src="images/participant-image.png" class="participant-element__image" alt="Фото участника">
                         </div>
@@ -269,7 +270,7 @@
                             <a href="#" class="participant-element__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="participants-list__element">
+                        <div class="participants-list__element" data-number="2">
                         <div class="participant-element__image-wrap">
                             <img src="images/participant-image.png" class="participant-element__image" alt="Фото участника">
                         </div>
@@ -281,7 +282,7 @@
                             <a href="#" class="participant-element__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="participants-list__element">
+                    <div class="participants-list__element" data-number="3">
                         <div class="participant-element__image-wrap">
                             <img src="images/participant-image.png" class="participant-element__image" alt="Фото участника">
                         </div>
@@ -293,7 +294,7 @@
                             <a href="#" class="participant-element__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="participants-list__element">
+                    <div class="participants-list__element " data-number="4">
                         <div class="participant-element__image-wrap">
                             <img src="images/participant-image.png" class="participant-element__image" alt="Фото участника">
                         </div>
@@ -305,7 +306,7 @@
                             <a href="#" class="participant-element__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="participants-list__element">
+                    <div class="participants-list__element" data-number="5">
                         <div class="participant-element__image-wrap">
                             <img src="images/participant-image.png" class="participant-element__image" alt="Фото участника">
                         </div>
@@ -317,7 +318,7 @@
                             <a href="#" class="participant-element__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="participants-list__element">
+                    <div class="participants-list__element" data-number="6">
                         <div class="participant-element__image-wrap">
                             <img src="images/participant-image.png" class="participant-element__image" alt="Фото участника">
                         </div>
@@ -329,6 +330,7 @@
                             <a href="#" class="participant-element__link">Подробнее</a>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
