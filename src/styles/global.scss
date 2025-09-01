@@ -69,6 +69,10 @@ h1{
   @include adaptive.x-small{
     font-size: 36px;
   }
+
+  @include adaptive.xx-small{
+    font-size: 28px;
+  }
 }
 
 h2{
@@ -88,6 +92,10 @@ h2{
 
   @include adaptive.x-small{
     font-size: 36px;
+  }
+
+  @include adaptive.xx-small{
+    font-size: 28px;
   }
 }
 

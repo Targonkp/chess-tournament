@@ -2,13 +2,52 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Описание главной страницы сайта">
     <title>Главная страница</title>
-</head>
+<link href="main.css" rel="stylesheet"></head>
 <body>
-<%= require('./chunks/header.html').default %>
+<header>
+    <div class="header-container">
+        <div class="block-wrap">
+            <div class="header__wrap">
+                <div class="header__logo">
+                    <a href="/">
+                        <img src="images/logo.svg" alt="Логотип">
+                    </a>
+                </div>
+                <div class="header__text">
+                    <div class="text-main">
+                       <h1>
+                           <span>Превратите</span>
+                           <span>уездный город</span>
+                           <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;в столицу</span>
+                           <span>&nbsp;&nbsp;&nbsp;земного шара</span>
+                       </h1>
+                    </div>
+                    <div class="text-additional">
+                        <span>
+                                Оплатите взнос на&nbsp;телеграммы для организации Международного васюкинского турнира по&nbsp;шахматам
+                        </span>
+                    </div>
+                </div>
+                <div class="header__buttons">
+                    <div class="button__wrap">
+                        <a href="#introduction" class="button__link button__link_black">
+                            Поддержать шахматную мысль
+                        </a>
+                    </div>
+                    <div class="button__wrap">
+                        <a href="#more-details" class="button__link button__link_transparent">
+                            Подробнее о&nbsp;турнире
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <main>
     <section class="marquee-block">
         <div class="marquee-block">
@@ -414,7 +453,7 @@
                             <a href="#" class="participant-element__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="participants-list__element " data-number="4">
+                    <div class="participants-list__element" data-number="4">
                         <div class="participant-element__image-wrap">
                             <img src="images/participant-image.png" class="participant-element__image" alt="Фото участника">
                         </div>
@@ -482,6 +521,14 @@
         </div>
     </section>
 </main>
-<%= require('./chunks/footer.html').default %>
-</body>
+<footer>
+    <div class="footer-container">
+        <div class="block-wrap">
+            <p class="footer-paragraph">
+                Все персонажи, события и&nbsp;цитаты являются вымышленными и&nbsp;не&nbsp;принадлежат создателям сайта. С&nbsp;подробностями можно познакомиться в&nbsp;главе XXXIV романа Ильи Ильфа и&nbsp;Евгения Петрова &laquo;Двенадцать стульев&raquo;.
+            </p>
+        </div>
+    </div>
+</footer>
+<script defer="defer" src="main-bundle.js"></script></body>
 </html>
